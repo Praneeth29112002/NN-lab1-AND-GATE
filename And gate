@@ -1,0 +1,15 @@
+import numpy as np
+X=np.asarray([[0,0],[0,1],[1,0],[1,1]])
+y= np.asarray([0,0,0,0])
+y_pred=np.asarray([0,0,0,0])
+weights=np.asarray([1,1])
+threshold=1.5
+for index in range(X.shape[0]):
+  x=X[index]
+  sw=np.dot(x,weights)
+  if sw>=threshold:
+    y_pred[index]=1
+  else:
+    y_pred[index]=0
+print(y)
+print(y_pred)  
